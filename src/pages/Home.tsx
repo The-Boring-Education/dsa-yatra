@@ -22,7 +22,7 @@ const Home = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };
@@ -63,9 +63,12 @@ const Home = () => {
         >
           <div className="flex justify-center items-center gap-3 mb-4">
             <Sparkles className="w-8 h-8 text-yellow-400 animate-bounce" />
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              DSA Yatra
-            </h1>
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                DSA Yatra
+              </h1>
+              <p className="text-lg text-gray-400 mt-2">By The Boring Education</p>
+            </div>
             <Sparkles className="w-8 h-8 text-yellow-400 animate-bounce" />
           </div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -181,7 +184,7 @@ const Home = () => {
             >
               Sachin
             </a>{" "}
-            at{" "}
+            with ❤️ at{" "}
             <a
               href="https://theboringeducation.com"
               target="_blank"
